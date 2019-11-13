@@ -15,7 +15,9 @@ class ToDoListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+        if let items = UserDefaults.standard.array(forKey: "itemArray") as? [String]{
+            itemArray = items
+        }
     }
 
     // MARK: - Table view data source
